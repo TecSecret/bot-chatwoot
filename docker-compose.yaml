@@ -48,7 +48,7 @@ services:
 
 
   chatwoot-sidekiq:
-    image: chatwoot/chatwoot:v2.13.1
+    image: chatwoot/chatwoot:latest
     environment:
       - RAILS_ENV=production
       - RAILS_LOG_TO_STDOUT=true
@@ -71,12 +71,12 @@ services:
       - RAILS_ENV=production
       - RAILS_LOG_TO_STDOUT=true
       - SECRET_KEY_BASE=Testing1234
-      - BOTPRESS_ENDPOINT=http://botpress:3000
+      - BOTPRESS_ENDPOINT=http://botpress:3001
       - BOTPRESS_BOT_ID=hello
       - CHATWOOT_ENDPOINT=http://chatwoot:3000
       - CHATWOOT_BOT_TOKEN=password
     ports:
-      - '3002:3000'
+      - '3001:3001'
 
 volumes:
   postgres:
